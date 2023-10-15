@@ -2,6 +2,7 @@
 
 class Car
 {
+    private int $id;
     private string $name;
     private string $engine;
     private int $year;
@@ -9,8 +10,9 @@ class Car
     private string $img;
 
 
-    public function __construct($name, $engine, $year, $km, $img)
+    public function __construct($id, $name, $engine, $year, $km, $img)
     {
+        $this->id = $id;
         $this->name = $name;
         $this->engine =$engine;
         $this->year = $year;
@@ -18,18 +20,7 @@ class Car
         $this->img = $img;
 
     }
-
-    // public function getYear()
-    // {
-    //     foreach ($this as $key=>$value) {
-    //         if($key==="year") {
-    //             echo $value;
-    //         }
-
-    //     }
-    // }
-
-
+    public function getId(): int { return $this->id; }
 
     public function getYear(): int
     {
@@ -74,4 +65,7 @@ class Car
 
     public function getImg(): string { return $this->img; }
     public function setImg(string $img): self { $this->img = $img; return $this; }
+
+
+
 }

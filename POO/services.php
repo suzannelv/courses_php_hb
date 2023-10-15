@@ -15,7 +15,6 @@ $uniqueYear = array_unique($allYears);
 // $uniqueYear = array_unique(array_map(fn (Car $c) => $c->getYear(), $cars));
 sort($uniqueYear);
 
-
 ?>
 
 <h2 class = "flex text-6xl font-bold justify-center mx-auto mb-20 "> <?php echo $title ?></h2>
@@ -38,7 +37,7 @@ sort($uniqueYear);
 
  </form>
 
-<main class="grid grid-rows-3 grid-flow-col gap-4 place-content-center"> 
+<main class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 place-content-center place-items-center"> 
     <?php
     foreach($cars as $car) { ?> 
         <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
