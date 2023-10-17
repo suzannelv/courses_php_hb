@@ -10,7 +10,17 @@ if (!isset($_GET['year'])) {
 }
 
 ['year'=>$search] = $_GET;
-$carsFound = findCarByYear($cars, $search);
+$cars = new CarsFn($cars);
+$carsFound = $cars->findByYear($search);
+
+// solution de Lucas
+if (isset($_GET['year'])) {
+    $year= intval($_GET['year']);
+    $results = array_filter($cars, fn (Car $car) => $year === $car->getYear());
+
+} else {
+    $results = $cars;
+}
 ?>
 
 

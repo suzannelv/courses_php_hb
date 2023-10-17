@@ -4,6 +4,8 @@ $menuItems = [
     new MenuItem("index.php", "Accueil"),
     new MenuItem("about.php", "A propos"),
     new MenuItem("services.php", "Services"),
+    new MenuItem("newsletter.php", "Newsletter"),
+
 ];
 
 ?>
